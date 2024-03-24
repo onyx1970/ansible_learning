@@ -1,0 +1,102 @@
+    1  vi /etc/hosts
+    2  su -
+    3  vi /etc/hosts
+    4  su -
+    5  r2d2c3p0
+    6  vi /etc/hosts
+    7  su -
+    8  ssh ansible-1
+    9  ssh ansible-2
+   10  ssh ansible-3
+   11  ssh ansible-1
+   12  ls -al .ssh
+   13  rm -fr known_hosts.old
+   14  ll
+   15  ls -al
+   16  cd .ssh
+   17  ll
+   18  rm -f known_hosts.old
+   19  ll
+   20  ssh-keygen -t ed25519 -C ' '
+   21  ssh-keygen -t ed25519 -C 'MJ default'
+   22  ll
+   23  cat id_ed25519.pub
+   24  ssh-copy-id -i ~/.ssh/id_ed25519.pub ansible-1
+   25  ssh-copy-id -i ~/.ssh/id_ed25519.pub ansible-2
+   26  ssh-copy-id -i ~/.ssh/id_ed25519.pub ansible-3
+   27  ssh-keygen -t ed25519 -C 'ansible' 
+   28  ssh-copy-id -i ~/.ssh/ansible.pub ansible-1
+   29  ssh-copy-id -i ~/.ssh/ansible.pub ansible-2
+   30  ssh-copy-id -i ~/.ssh/ansible.pub ansible-3
+   31  ssh ansible-1
+   32  ssh --?
+   33  ssh -i /home/michi/.ssh/ansible ansible-1
+   34  ssh -i /home/michi/.ssh/ansible ansible-2
+   35  ssh -i /home/michi/.ssh/ansible ansible-3
+   36  eval $(ssh-agent)
+   37  ps aux | grep 1707
+   38  shh-add
+   39  ssh-add
+   40  ssh ansible-1
+   41  cd ..
+   42  ll
+   43  vi .bashrc
+   44  . .bashrc
+   45  vi .bashrc
+   46  yum search git
+   47  sudo yum install git.x86_64
+   48  su - 
+   49  git
+   50  cd
+   51  cat .ssh/id_ed25519.pub 
+   52  git clone git@github.com:onyx1970/ansible_learning.git
+   53  ll
+   54  pwd
+   55  cd ansible_learning/
+   56  ll
+   57  cat ansible.cfg
+   58  vi ansible.cfg
+   59  ll
+   60  git config show
+   61  git config 
+   62  git config --get-all
+   63  ll
+   64  ls -al
+   65  cd .git
+   66  ll
+   67  vi config
+   68  cd ..
+   69  git config --global --get-all
+   70  git --get-all
+   71  git config --global user.name "Michael Junghans"
+   72  git config --global user.email "mj.github@xbugs.de"
+   73  cd ..
+   74  ls -al
+   75  cd ansible_learning/
+   76  vi README.md 
+   77  git status
+   78  git diff
+   79* git 
+   80  git status
+   81  git add ansible.cfg
+   82  git status
+   83  git commit -m "updated history"
+   84  git push origin master
+   85  git push origin main
+   86  su - 
+   87  ll
+   88  vi inventory 
+   89  git status
+   90  git add inventory
+   91  git status
+   92  git commit -m "inventory adjusted"
+   93  git push origin main
+   94  cat ansible.cfg 
+   95  vi ansible.cfg 
+   96  ansible all --key-file ~/.ssh/ansible -i inventory
+   97  ansible all --key-file ~/.ssh/ansible -i inventory -m ping
+   98  git status 
+   99  git add ansible.cfg
+  100  git commit -m "ansible.cfg adjusted"
+  101  git push origin main
+  102  history > commands.txt
